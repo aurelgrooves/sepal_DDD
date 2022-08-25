@@ -11,19 +11,17 @@
 # 
 # 3. using the data from the Global Human Settlement [(GHS) BUILT data set](https://ghslsys.jrc.ec.europa.eu/ghs_bu2019.php) we apply built-up area
 # 
-# 4. assign open and closed forests according to tree cover
+# 4. assign open and closed forests according to tree cover %
 # 
-# 5. montane and sub-montane forest are reclassed using the new NASA [digital elevation model](https://earthdata.nasa.gov/esds/competitive-programs/measures/nasadem)
+# 5. define montane and sub-montane forest are reclassed using the new NASA [digital elevation model](https://earthdata.nasa.gov/esds/competitive-programs/measures/nasadem)
 # 
-# 6. the digital elevation is used to remove any erroneous inland mangroves, and reclass them to swamp forest instead
+# 6. the digital elevation and ESA mangrove layer are used to remove any erroneous inland mangroves, and reclass them to swamp forest instead
 # 
-# 7. areas of non-permanent water defined by the JRC [Global Surface Water product](https://global-surface-water.appspot.com/) are used to identify additional aquatic grasslands.
+# 7. areas of non-permanent water defined by the JRC [Global Surface Water product](https://global-surface-water.appspot.com/) are used to correct and identify additional aquatic grasslands.
 # 
-# 8. national land cover data for 2015 provided by Gabon replace the regional classification area for all areas - shifts or gaps between countries are recoded to dense forest. We also include available land cover data for annobon
+# 8. national land cover data for 2015 provided by Gabon replace the regional classification area. We also include available land cover data for Annobon, Equatorial Guinea which does not have sufficient satellite data coverage. 
 # 
-# 9. the classification is recoded to forest/non-forest; while in the Central African Republic, areas of sparser savanna (shrub savanna) is recoded to forest to adhere to the national forest definition (>10% tree cover)
-# 
-# 10. a 3x3 mode filter is applied to smooth results (for all areas except Gabon)
+# 9. the classification is recoded to forest/non-forest; while in the Central African Republic, areas of sparser savanna (shrub savanna) are recoded to forest to adhere to the national forest definition (>10% tree cover)
 # 
 # 
 # the data are visualized and exported to your Google Drive or Asset. 
