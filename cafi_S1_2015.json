@@ -1,0 +1,83 @@
+{
+  "id": "b1b55fce-0a13-559f-451b-ed3ec2c6c47c",
+  "type": "RADAR_MOSAIC",
+  "placeholder": "Radar_mosaic_2021-11-30_11-50-27",
+  "model": {
+    "dates": {
+      "fromDate": "2015-01-01",
+      "toDate": "2015-12-31"
+    },
+    "options": {
+      "orbits": [
+        "ASCENDING",
+        "DESCENDING"
+      ],
+      "geometricCorrection": "ELLIPSOID",
+      "speckleFilter": "QUEGAN",
+      "outlierRemoval": "MODERATE"
+    },
+    "aoi": {
+      "type": "EE_TABLE",
+      "id": "projects/cafi_fao_congo/regional/congo_basin_lsib",
+      "keyColumn": "One",
+      "key": 1,
+      "buffer": 0
+    }
+  },
+  "layers": {
+    "areas": {
+      "center": {
+        "id": "default-layer",
+        "imageLayer": {
+          "sourceId": "this-recipe",
+          "layerConfig": {
+            "visParams": {
+              "type": "rgb",
+              "bands": [
+                "VV_max",
+                "VH_min",
+                "NDCV"
+              ],
+              "min": [
+                -17,
+                -25,
+                -1
+              ],
+              "max": [
+                10,
+                2,
+                1
+              ],
+              "gamma": [
+                1,
+                1,
+                1
+              ],
+              "inverted": [
+                false,
+                false,
+                false
+              ]
+            }
+          }
+        },
+        "featureLayers": [
+          {
+            "sourceId": "aoi"
+          },
+          {
+            "sourceId": "labels",
+            "disabled": true
+          },
+          {
+            "sourceId": "values",
+            "disabled": true
+          }
+        ]
+      }
+    },
+    "mode": "stack"
+  },
+  "title": "cafi_S1_2015",
+  "projectId": null
+}
